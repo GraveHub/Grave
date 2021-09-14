@@ -1,6 +1,6 @@
 if game.PlaceId == 155615604 then
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib("GraveHub PrisonLife V4", "BloodTheme")
+    local Window = Library.CreateLib("GraveHub PrisonLife V5", "BloodTheme")
 
     -- MAIN
     local Main = Window:NewTab("Main")
@@ -47,6 +47,37 @@ end)
     PlayerSection:NewSlider("Jumppower", "Change the jumppower", 250, 50, function(v)
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
+    local Main = Window:NewTab("Teleports")
+local MainSection = Main:NewSection("Thank u for using GraveHub!")
+MainSection:NewButton("Crim Base", "tp to crim base", function(currentOption)
+print(currentOption)
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-900, 94, 2066)
+wait(0.1)
+pl.CFrame = location
+end)
+MainSection:NewButton("Police Parking", "tp to Prison Parking", function(currentOption)
+print(currentOption)
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(607, 98, 2244)
+wait(0.1)
+pl.CFrame = location
+end)
+MainSection:NewButton("Prison", "tp to Prison", function(currentOption)
+print(currentOption)
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(854, 99, 2366)
+wait(0.1)
+pl.CFrame = location
+end)
+MainSection:NewButton("Yard", "tp to yard", function(currentOption)
+print(currentOption)
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(785, 97, 2453)
+wait(0.1)
+pl.CFrame = location
+end)
+
 elseif game.PlaceId == 3956818381 then
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
     local Window = Library.CreateLib("GraveHub Ninja Legends V4", "Synapse")
